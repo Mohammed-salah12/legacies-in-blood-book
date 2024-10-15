@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <main class="holder">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <!-- Logo Section -->
+          <a class="navbar-brand" href="#">
+            <img src="./imgs/logopook.png" alt="Logo" class="logo-img" />
+          </a>
+
+          <!-- Toggle button for mobile view -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <!-- Include Font Awesome CSS -->
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            />
+
+            <!-- Toggle button with Font Awesome icon -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i
+                class="fas fa-bars"
+                style="color: #ea9671; font-size: 30px"
+              ></i>
+            </button>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto w-100">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="go-home">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="open-introduction"
+                  >Introduction</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="go-contributes">Contributes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="go-conclusion">Conclusion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="book-section">
+        <h1 class="comingSoonHeader">
+          COMING VERY <br />
+          SOON
+        </h1>
+        <div class="container bookHolder">
+          <div class="right">
+            <figure class="back" id="back-cover"></figure>
+            <figure class="front" id="before-back-cover"></figure>
+          </div>
+
+          <div class="right">
+            <figure class="back back-eightth-page"></figure>
+            <figure class="front front-eightth-page"></figure>
+          </div>
+          <div class="right">
+            <figure class="back back-seventh-page"></figure>
+            <figure class="front front-seventh-page"></figure>
+          </div>
+          <div class="right">
+            <figure class="back back-sixth-page"></figure>
+            <figure class="front front-sixth-page"></figure>
+          </div>
+          <div class="right">
+            <figure class="back back-fifth-page"></figure>
+            <figure class="front front-fifth-page"></figure>
+          </div>
+          <div class="right">
+            <figure class="back back-forth-page"></figure>
+            <figure class="front front-forth-page"></figure>
+          </div>
+          <div class="right">
+            <figure class="back back-thered-page"></figure>
+            <figure class="front front-thered-page"></figure>
+          </div>
+
+          <div class="right">
+            <figure class="back back-sec-page"></figure>
+            <figure class="front front-sec-page"></figure>
+          </div>
+          <div class="right">
+            <figure class="back back-for-front-cover"></figure>
+            <figure class="front front-cover" id="cover"></figure>
+          </div>
+        </div>
+        <div class="qrCoderHolder">
+          <h1 class="qrCodeImg"><a href="#">BUY NOW!</a></h1>
+        </div>
+        <div class="btnsHolder">
+          <button onclick="turnLeft()">Prev</button>
+          <button onclick="turnRight()">Next</button>
+        </div>
+        <br />
+      </div>
+      <footer class="footer">
+        <div class="Navegators">
+          <h3>Navegators</h3>
+          <a class="nav-link" href="#" id="go-home">Home</a>
+          <a class="nav-link" href="#" id="open-introduction">Introduction</a>
+          <a href="#" class="nav-link">Contributes</a>
+          <a class="nav-link" href="#" id="go-contributes">Contributes</a>
+          <a class="nav-link" href="#" id="go-conclusion">Conclusion</a>
+        </div>
+        <div class="contacts">
+          <h3>Contacts</h3>
+          <a href="mailto:legaciesinblood@gmail.com" class="nav-link">Email</a>
+          <a href="https://linktr.ee/legacies_in_blood" class="nav-link"
+            >linkTree</a
+          >
+        </div>
+        <div class="Workers">
+          <h3>Team</h3>
+          <a
+            href="mailto:omarsalah087@gmail.com
+          "
+            class="nav-link"
+            >Omar Salah (Author)</a
+          >
+          <a href="https://wa.me/972568577661" class="nav-link"
+            >Hala Salah (Author)
+          </a>
+          <a href="mailto:lucy.cripps.2@gmail.com" class="nav-link"
+            >Lucy Cripps (Editor)</a
+          >
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/mohammed-salah-542639250"
+            class="nav-link moh"
+          >
+            Mohammed Salah (Web Developer)
+          </a>
+
+          <a href="mailto:Hlayarapal@gmail.com" class="nav-link hla"
+            >Hla Al-Safadi (Designer)</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

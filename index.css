@@ -1,0 +1,581 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/* EA9671 */
+.holder {
+  min-height: 120vh; /* Ensure the holder takes up at least the full viewport height */
+  width: 100%;
+  background-image: url(./imgs/coverep.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  padding: 10px 0; /* Optional: Add padding for the navbar */
+}
+
+.navbar-brand {
+  padding: 30px !important; /* Small padding for the logo */
+}
+/* Style for the navbar toggle button */
+.navbar-toggler {
+  border: none; /* Remove the border if you want */
+}
+
+.navbar-toggler-icon {
+  background-image: none; /* Remove the default icon */
+  width: 30px; /* Width of the custom icon */
+  height: 30px; /* Height of the custom icon */
+}
+
+/* Creating the lines for the toggle icon */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px; /* Thickness of the lines */
+  background-color: #ea9671; /* Color of the lines */
+  margin: 5px 0; /* Space between the lines */
+}
+
+/* Optional: styling the middle line */
+.navbar-toggler-icon::before {
+  /* Additional styles can go here */
+}
+
+.navbar-toggler-icon::after {
+  /* Additional styles can go here */
+}
+
+.navbar-nav .nav-link {
+  color: #98181c; /* Set the link color */
+  padding: 15px 20px; /* Add padding to the navigation links */
+  position: relative; /* Required for absolute positioning of the border */
+  text-decoration: none; /* Remove the default underline */
+  font-size: 26px;
+  font-family: "Bebas Neue", sans-serif; /* Set the font to Bebas Neue */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 600px !important;
+  margin-right: 30px;
+  background-color: rgba(234, 150, 113, 0.8);
+  border-radius: 10px;
+}
+.navbar-nav .nav-link::before {
+  content: ""; /* Empty content for the border */
+  position: absolute; /* Absolute positioning */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  top: 0; /* Align to the top */
+  bottom: 0; /* Align to the bottom */
+  z-index: -1; /* Send the border behind the text */
+  transform: scale(1.1); /* Slightly increase the size of the border */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover::before {
+  transform: scale(1.2); /* Scale up the border on hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #693037; /* Optional: Change color on hover */
+}
+
+.navbar-nav .nav-link.active {
+  color: #693037; /* Set the active link color */
+}
+
+.nav-item {
+  margin-right: 20px; /* Increase gap between navigation items */
+}
+
+.logo-img {
+  width: 200px;
+  height: 130px;
+}
+.book-section {
+  height: 100vh;
+  width: 100%;
+  /* padding: 40px 0; */
+  text-align: center;
+  flex-direction: row;
+  display: flex;
+}
+.right.flip::before {
+  pointer-events: none; /* This will make the layer unclickable */
+}
+
+.book-section > .container {
+  height: 692px;
+  width: 700px;
+  position: relative;
+  transform: translate(-10%, -8%) !important;
+  perspective: 1200px;
+}
+.comingSoonHeader {
+  height: fit-content;
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ea9671;
+  font-family: "Bebas Neue", sans-serif; /* Set the font to Bebas Neue */
+  transform: translate(180px, 90px);
+}
+.btnsHolder {
+  transform: translate(-750px, 700px);
+  height: fit-content;
+}
+.container > .right {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  transition: 0.7s ease-in-out;
+  transform-style: preserve-3d;
+}
+.book-section > .container > .right {
+  right: 0;
+  transform-origin: left;
+  border-radius: 10px 0 0 10px;
+}
+.right > figure.front,
+.right > figure.back {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-color: white;
+  overflow: hidden;
+}
+.right > figure.front {
+  background-position: right;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.2);
+}
+.right > figure.back {
+  background-position: left;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -2px 2px 15px -2px rgba(0, 0, 0, 0.2);
+  transform: rotateY(180deg);
+}
+.flip {
+  transform: rotateY(-180deg);
+}
+.flip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+button {
+  border: 2px solid #ea9671;
+  background-color: transparent;
+  color: #ea9671;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+.qrCodeImg {
+  width: 250px;
+  height: 250px;
+  transform: translate(-100px, 80px);
+}
+
+.qrCodeImg a {
+  font-size: 100px;
+  text-decoration: none !important;
+  font-family: "Bebas Neue", sans-serif; /* Set the font to Bebas Neue */
+  color: #ea9671;
+}
+.qrCodeImg a:hover {
+  color: #ef9f00;
+}
+.book-section > button:focus,
+.book-section > button:active {
+  outline: none;
+}
+.book-section > p {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: calibri;
+  font-size: 24px;
+}
+.book-section > p > a {
+  text-decoration: none;
+  color: #ef9f00;
+}
+.book-section > button:hover {
+  background-color: #ef9f00;
+  color: #fff;
+}
+.front.front-cover {
+  background-image: url("./imgs/cover.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  font-family: calibri;
+  text-align: left;
+}
+.back-for-front-cover {
+  background-image: url("./imgs/empty.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.front-sec-page {
+  background-image: url("./imgs/BOOk.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.front-thered-page {
+  background-image: url("./imgs/booklet3.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-thered-page {
+  background-image: url("./imgs/booklet4.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.front-forth-page {
+  background-image: url("./imgs/booklet5.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-forth-page {
+  background-image: url("./imgs/booklet6.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.front-fifth-page {
+  background-image: url("./imgs/booklet7.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-fifth-page {
+  background-image: url("./imgs/booklet8.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.front-sixth-page {
+  background-image: url("./imgs/booklet9.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-sixth-page {
+  background-image: url("./imgs/booklet10.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+
+.front-seventh-page {
+  background-image: url("./imgs/booklet11.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-seventh-page {
+  background-image: url("./imgs/booklet12.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.front-eightth-page {
+  background-image: url("./imgs/hlalucy.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-eightth-page {
+  background-image: url("./imgs/empty.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+
+.front-ninth-page {
+  background-image: url("./imgs/") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+.back-sec-page {
+  background-image: url("./imgs/booklet2.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: calibri;
+  text-align: left;
+}
+div.right #before-back-cover {
+  background-image: url("./imgs/5atemaa1.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  font-family: calibri;
+}
+#back-cover {
+  background-image: url("./imgs/backCover.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  font-family: calibri;
+}
+.front#cover h1 {
+  color: #fff;
+}
+.front#cover p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+}
+.front:hover {
+  transform: rotateY(-2deg) scale(1.001); /* Rotate, translate left, and scale */
+  transition: transform 0.3s ease-in-out; /* Ensure smooth transition */
+}
+
+.back:hover {
+  transform: rotateY(2deg) scale(1.001); /* Rotate, translate left, and scale */
+  transition: transform 0.3s ease-in-out; /* Ensure smooth transition */
+}
+
+/* Apply styles only for screens exactly 1440px wide */
+@media (min-width: 1440px) and (max-width: 1440px) {
+  .book-section > .container {
+    height: 590px;
+    width: 700px;
+    position: relative;
+    transform: translate(-5%, -11%) !important;
+    perspective: 1200px;
+  }
+
+  .comingSoonHeader {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ea9671;
+    font-family: "Bebas Neue", sans-serif;
+    transform: translate(100px, 90px);
+  }
+
+  .btnsHolder {
+    transform: translate(-580px, 550px);
+    height: fit-content;
+    display: flex;
+    width: 300px;
+    gap: 10px;
+  }
+
+  .qrCodeImg {
+    width: 250px;
+    height: 250px;
+    transform: translate(50px, 100px);
+  }
+
+  .navbar-brand {
+    padding-left: 100px !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .book-section > .container {
+    height: 430px;
+    width: 700px;
+    position: relative;
+    transform: translate(15%, -11%) !important;
+    perspective: 1200px;
+  }
+
+  .comingSoonHeader {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ea9671;
+    font-family: "Bebas Neue", sans-serif;
+    transform: translate(100px, 40px);
+  }
+
+  .btnsHolder {
+    transform: translate(-400px, 400px);
+    height: fit-content;
+    display: flex;
+    width: 300px;
+    gap: 10px;
+  }
+
+  .qrCodeImg {
+    width: 200px;
+    height: 200px;
+    transform: translate(120px, 100px);
+  }
+
+  .navbar-brand {
+    padding-left: 100px !important;
+  }
+}
+@media (min-width: 374px) and (max-width: 520px) {
+  .book-section > .container {
+    height: 235px !important;
+    /* position: relative; */
+    transform: translate(162%, 0%) !important;
+    background-size: cover;
+  }
+
+  .comingSoonHeader {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ea9671;
+    font-family: "Bebas Neue", sans-serif;
+    transform: translate(70px, 40px);
+  }
+
+  .btnsHolder {
+    transform: translate(-180px, 356px);
+    height: fit-content;
+    display: flex;
+    width: 300px;
+    gap: 10px;
+  }
+
+  .qrCodeImg {
+    width: 150px;
+    height: 150px;
+    transform: translate(-20px, 420px);
+  }
+  .right > figure.front,
+  .right > figure.back {
+    margin: 0;
+    height: 350px;
+    width: 245px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    background-color: white;
+    overflow: hidden;
+  }
+  .flip::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 350px;
+    width: 245px;
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  footer.footer {
+    flex-wrap: nowrap !important;
+    gap: 25px !important;
+    padding: 0 10px;
+  }
+  footer.footer div {
+    width: 120px !important;
+    height: 250px;
+    background-color: rgba(234, 150, 113, 0.8);
+    border-radius: 10px;
+    color: #98181c; /* Set the link color */
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif; /* Set the font to Bebas Neue */
+    font-size: 17px;
+  }
+  .Workers {
+    flex-grow: 1;
+  }
+  .moh {
+    padding-left: 0 !important;
+  }
+  .hla {
+    padding-left: 0 !important;
+  }
+}
+
+/* #722f37  #9c353c  #bc353e */
+footer.footer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+footer.footer div {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(234, 150, 113, 0.8);
+  border-radius: 10px;
+  color: #98181c; /* Set the link color */
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif; /* Set the font to Bebas Neue */
+  font-size: 17px;
+}
+footer.footer div.contacts {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(234, 150, 113, 0.8);
+  border-radius: 10px;
+  color: #98181c; /* Set the link color */
+  display: flex;
+  gap: 64px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif; /* Set the font to Bebas Neue */
+  font-size: 17px;
+}
+.moh {
+  padding-left: 35px !important;
+}
+.hla {
+  padding-left: 30px !important;
+}
