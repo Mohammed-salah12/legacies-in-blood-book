@@ -136,3 +136,22 @@ document.querySelectorAll(".back").forEach((backPage) => {
     turnLeft(); // Turn to the previous page on back click
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyBackgrounds = document.querySelectorAll(".front, .back");
+
+  let lazyBackgroundObserver = new IntersectionObserver(function (
+    entries,
+    observer
+  ) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.backgroundImage = `url('${entry.target.dataset.bg}')`;
+        lazyBackgroundObserver.unobserve(entry.target);
+      }
+    });
+  });
+
+  lazyBackgrounds.forEach(function (lazyBackground) {
+    lazyBackgroundObserver.observe(lazyBackground);
+  });
+});
